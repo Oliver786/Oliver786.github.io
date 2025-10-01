@@ -1,0 +1,113 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#auth-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #2c2f33;
+    color: #fff;
+}
+
+#auth-bar img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#score-container {
+    font-size: 2em;
+    text-align: center;
+    color: #ffdab9;
+    background-color: purple;
+    padding: 10px;
+}
+
+#octopus {
+    display: block;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.bonus-appear {
+    animation: flyInFromTop 1s ease-in-out both;
+}
+
+/* style.css */
+.vibrate {
+    animation: vibrate 0.1s linear infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+/* style.css */
+.crumb {
+    position: absolute;
+    width: 20px;               /* Размер вашей картинки */
+    height: 20px;              /* Размеры масштабируются пропорционально */
+    animation: riseAndFade 0.5s ease-in-out forwards;
+}
+
+@keyframes riseAndFade {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+@keyframes flyInFromTop {
+    0% {
+        transform: translateY(-100vh); /* Начинаем вне видимости сверху */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);      /* Появляемся на своё место */
+        opacity: 1;
+    }
+}
+
+#leaderboard {
+    max-width: 480px;
+    margin: 16px auto;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+#leaderboard h2 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#leaderboard-list {
+    list-style: decimal inside;
+}
+
+#save-score {
+    font-size: 0.5em;
+    margin-left: 12px;
+}
